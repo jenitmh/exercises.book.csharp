@@ -11,14 +11,16 @@ namespace exercises.book.csharp
             string year;
             int age, result;
 
-            year = Interaction.InputBox(
+            Console.Write(
                 "Введите год рождения: ",
                 "Год рождения"
                 );
+            year = Console.ReadLine();
             result = Int32.Parse(year);
+
             age = 2020 - result;
 
-            MessageBox.Show("Ваш возраст: " + age);
+            Console.WriteLine("Ваш возраст: " + age);
         }
     }
 }
