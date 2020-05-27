@@ -4,28 +4,20 @@ using System.Windows.Forms;
 
 namespace exercises.book.csharp
 {
-    class Exercise8
+    class Exercise9
     {
         private static void Main()
         {
-            string FirstNum, SecondNum;
-            int NumA, NumB, Sum;
+            string number;
+            int num, Pnum, Nnum;
 
-            FirstNum = Interaction.InputBox(
-                "Введите первое число: ",
-                "Сложение двух чисел"
-                );
-            NumA = Int32.Parse(FirstNum);
+            number = Interaction.InputBox("Введите число: ");
+            num = Int32.Parse(number);
 
-            SecondNum = Interaction.InputBox(
-                "Введите второе число: ",
-                "Сложение двух чисел"
-                );
-            NumB = Int32.Parse(SecondNum);
+            Pnum = num - 1; // Предыдущее число от введенного
+            Nnum = num + 1; // Следующее число от введенного
 
-            Sum = NumA + NumB;
-
-            MessageBox.Show("Сумма введенных чисел равна " + Sum);
+            MessageBox.Show("Последовательность трех чисел: " + Pnum + ", " + num + ", " + Nnum + ".");
         }
     }
 }
