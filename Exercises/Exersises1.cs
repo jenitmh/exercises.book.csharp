@@ -11,19 +11,17 @@ namespace exercises.book.csharp
             string firstname, age;
             int year;
 
-            Console.Title = "Шаг 1";
-            Console.Write("Введите свое имя: ");
-            firstname = Console.ReadLine();
-
-            Console.Title = "Шаг 2";
-            Console.Write("Введите свой возраст: ");
-            age = Console.ReadLine();
+            firstname = Interaction.InputBox(
+                "Введите свое имя:",
+                "Шаг 1"
+                );
+            age = Interaction.InputBox(
+                "Введите свой возраст:",
+                "Шаг 2"
+                );
             year = Int32.Parse(age);
 
-            Console.WriteLine();
-            Console.WriteLine("Ваше полное имя " + firstname);
-            Console.WriteLine("Ваш возраст" + " " + year + ".");
-
+            MessageBox.Show("Ваше имя: " + firstname + "\n" + "Ваш возраст: " + year);
         }
     }
 }
