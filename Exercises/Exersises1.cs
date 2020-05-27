@@ -4,24 +4,21 @@ using System.Windows.Forms;
 
 namespace exercises.book.csharp
 {
-    class Exercise2
+    class Exercise5Console
     {
         private static void Main()
         {
-            string firstname, age;
-            int year;
+            string year;
+            int age, result;
 
-            firstname = Interaction.InputBox(
-                "Введите свое имя:",
-                "Шаг 1"
+            year = Interaction.InputBox(
+                "Введите год рождения: ",
+                "Год рождения"
                 );
-            age = Interaction.InputBox(
-                "Введите свой возраст:",
-                "Шаг 2"
-                );
-            year = Int32.Parse(age);
+            result = Int32.Parse(year);
+            age = 2020 - result;
 
-            MessageBox.Show("Ваше имя: " + firstname + "\n" + "Ваш возраст: " + year);
+            MessageBox.Show("Ваш возраст: " + age);
         }
     }
 }
