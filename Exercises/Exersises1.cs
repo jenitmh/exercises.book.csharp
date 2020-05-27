@@ -8,17 +8,21 @@ namespace exercises.book.csharp
     {
         private static void Main()
         {
-            string firstname, secondname;
+            string firstname, age;
+            int year;
 
             Console.Title = "Шаг 1";
-            Console.WriteLine("Назовите свое имя");
+            Console.Write("Введите свое имя: ");
             firstname = Console.ReadLine();
 
             Console.Title = "Шаг 2";
-            Console.WriteLine("Назовите свою фамилию");
-            secondname = Console.ReadLine();
+            Console.Write("Введите свой возраст: ");
+            age = Console.ReadLine();
+            year = Int32.Parse(age);
 
-            Console.WriteLine("Ваше полное имя " + firstname + " " + secondname + ".");
+            Console.WriteLine();
+            Console.WriteLine("Ваше полное имя " + firstname);
+            Console.WriteLine("Ваш возраст" + " " + year + ".");
 
         }
     }
