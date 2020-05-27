@@ -11,23 +11,21 @@ namespace exercises.book.csharp
             string FirstNum, SecondNum;
             int NumA, NumB, Sum;
 
-            Console.Write(
+            FirstNum = Interaction.InputBox(
                 "Введите первое число: ",
                 "Сложение двух чисел"
                 );
-            FirstNum = Console.ReadLine();
             NumA = Int32.Parse(FirstNum);
 
-            Console.Write(
+            SecondNum = Interaction.InputBox(
                 "Введите второе число: ",
                 "Сложение двух чисел"
                 );
-            SecondNum = Console.ReadLine();
             NumB = Int32.Parse(SecondNum);
+
             Sum = NumA + NumB;
 
-            Console.WriteLine();
-            Console.WriteLine("Сумма введенных чисел равна " + Sum + ".");
+            MessageBox.Show("Сумма введенных чисел равна " + Sum);
         }
     }
 }
