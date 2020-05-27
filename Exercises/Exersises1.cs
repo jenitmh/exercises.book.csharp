@@ -4,23 +4,30 @@ using System.Windows.Forms;
 
 namespace exercises.book.csharp
 {
-    class Exercise5Console
+    class Exercise8
     {
         private static void Main()
         {
-            string year;
-            int age, result;
+            string FirstNum, SecondNum;
+            int NumA, NumB, Sum;
 
             Console.Write(
-                "Введите год рождения: ",
-                "Год рождения"
+                "Введите первое число: ",
+                "Сложение двух чисел"
                 );
-            year = Console.ReadLine();
-            result = Int32.Parse(year);
+            FirstNum = Console.ReadLine();
+            NumA = Int32.Parse(FirstNum);
 
-            age = 2020 - result;
+            Console.Write(
+                "Введите второе число: ",
+                "Сложение двух чисел"
+                );
+            SecondNum = Console.ReadLine();
+            NumB = Int32.Parse(SecondNum);
+            Sum = NumA + NumB;
 
-            Console.WriteLine("Ваш возраст: " + age);
+            Console.WriteLine();
+            Console.WriteLine("Сумма введенных чисел равна " + Sum + ".");
         }
     }
 }
