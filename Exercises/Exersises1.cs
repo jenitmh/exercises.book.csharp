@@ -8,16 +8,27 @@ namespace exercises.book.csharp
     {
         private static void Main()
         {
-            string number;
-            int num, Pnum, Nnum;
+            string firstnumber, secondnumber;
+            int numA, numB, sum, dif;
 
-            number = Interaction.InputBox("Введите число: ");
-            num = Int32.Parse(number);
+            Console.Write(
+                "Ведите первое число: ",
+                "Сумма и разность чисел"
+                );
+            firstnumber = Console.ReadLine();
+            numA = Int32.Parse(firstnumber);
 
-            Pnum = num - 1; // Предыдущее число от введенного
-            Nnum = num + 1; // Следующее число от введенного
+            Console.Write(
+                "Введите второе число: ",
+                "Сумма и разность чисел"
+                );
+            secondnumber = Console.ReadLine();
+            numB = Int32.Parse(secondnumber);
 
-            MessageBox.Show("Последовательность трех чисел: " + Pnum + ", " + num + ", " + Nnum + ".");
+            sum = numA + numB;
+            dif = numA - numB;
+
+            Console.WriteLine("Сумма введенных чисел равна: " + sum + "\n" + "Разность введенных чисел равна: " + dif);
         }
     }
 }
